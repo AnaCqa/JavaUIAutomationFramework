@@ -2,6 +2,7 @@ package online.tekwillacademy;
 
 import online.tekwillacademy.managers.DriverManager;
 import online.tekwillacademy.managers.RandomDataManager;
+import online.tekwillacademy.managers.ScrollManager;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -52,8 +53,7 @@ public class TestRunner {
 
         WebElement privacyToggleBar = driver.findElement(By.name("agree"));
         //scroll until the element is in view
-        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", privacyToggleBar);
-        Thread.sleep(500);
+        ScrollManager.scrollToElement(privacyToggleBar);
 
         privacyToggleBar.click();
 
