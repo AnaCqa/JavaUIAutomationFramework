@@ -50,4 +50,11 @@ public class DriverManager {
         return driver;
     }
 
+    public void quitTheDriver() {
+        driver.quit();
+        driver = null;
+        instance = null;
+        System.out.println("The Driver is closed after running and completing a test scenario");
+    }
+
 }
