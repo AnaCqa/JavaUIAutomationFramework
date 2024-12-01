@@ -1,4 +1,4 @@
-package online.tekwillacademy.stepdefinitions;
+package online.tekwillacademy;
 
 import online.tekwillacademy.managers.DriverManager;
 import online.tekwillacademy.managers.RandomDataManager;
