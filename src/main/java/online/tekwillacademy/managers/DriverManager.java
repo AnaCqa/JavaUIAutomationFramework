@@ -15,10 +15,11 @@ public class DriverManager {
     private DriverManager() {
         switch (WEB_DRIVER_TYPE.toUpperCase()) {
             case "CHROME":
-                //ChromeOptions options = new ChromeOptions();
-                //options.addArguments("--remote-allow-origins=*");
-                //driver = new ChromeDriver(options);
-                driver = new ChromeDriver();
+                ChromeOptions options = new ChromeOptions();
+               // options.addArguments("--remote-allow-origins=*");
+                options.addArguments("--incognito");
+                driver = new ChromeDriver(options);
+                //driver = new ChromeDriver();
                 driver.manage().window().maximize();
                 System.out.println("The Chrome Driver is opened.");
                 break;
